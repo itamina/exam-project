@@ -101,4 +101,11 @@ window.ExamApp.store = {
     if (type && type !== 'all') params.set('type', type);
     return this._fetch('/api/history?' + params.toString());
   },
+
+  async bulkSaveExams(exams) {
+    return this._fetch('/api/exams/bulk', {
+      method: 'POST',
+      body: JSON.stringify({ exams }),
+    });
+  },
 };

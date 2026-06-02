@@ -11,6 +11,7 @@ window.ExamApp = window.ExamApp || {};
     '/exams': 'examList',
     '/exams/': 'examDetail',
     '/history': 'history',
+    '/import': 'pdfImport',
   };
 
   function parseHash(hash) {
@@ -70,6 +71,7 @@ window.ExamApp = window.ExamApp || {};
       { label: 'ダッシュボード', page: 'dashboard', href: '#/dashboard', icon: 'home' },
       { label: '入試情報一覧', page: 'examList', href: '#/exams', icon: 'list', badge: stats.pending },
       { label: '確認履歴', page: 'history', href: '#/history', icon: 'clock' },
+      { label: 'PDF一括取込', page: 'pdfImport', href: '#/import', icon: 'upload' },
     ];
 
     appEl.innerHTML = `
